@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # GVC Chain Position Measure — Project Plan
 
 ## 1. Research Objective
