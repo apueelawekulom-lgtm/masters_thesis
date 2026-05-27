@@ -1,11 +1,27 @@
-# ── Shared ────────────────────────────────────────────────────────────────────
-# Raw BACI downloads — all chapters read from here, nobody writes here
+# ══════════════════════════════════════════════════════════════════════════════
+# paths.yaml — all file paths for the project
+# Edit this file when folders change. Never hardcode paths in notebooks.
+# Python: from src.paths import get, ROOT, PATHS
+# R:      source("../../src/paths.R")
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ── Shared — BACI raw downloads (all three chapters read from here) ───────────
 shared:
   raw:              data/raw/
   interim:          data/interim/
   processed:        data/processed/
 
-# ── NLI (run this chapter first — tsi_final.csv feeds everything else) ────────
+# ── BACI version folders ──────────────────────────────────────────────────────
+# Use hs17 as the primary — covers 2017–2024
+# Use hs12 only for pre-2017 extension
+# Use hs22 only for 2022+ robustness checks
+baci:
+  hs12:             data/raw/BACI_HS12_V202601/
+  hs17:             data/raw/BACI_HS17_V202601/
+  hs22:             data/raw/BACI_HS22_V202601/
+  merged:           data/raw/baci/
+
+# ── NLI (run first — tsi_final.csv is needed by all other chapters) ───────────
 nli:
   raw:              nli/data/raw/
   interim:          nli/data/interim/
@@ -15,6 +31,8 @@ nli:
   tsi_raw_scores:   nli/outputs/tsi_labels/tsi_raw_scores.csv
 
 # ── Econometrics ──────────────────────────────────────────────────────────────
+# raw/ = chapter-specific inputs only (tariff lists, BIS controls)
+# BACI flows come from shared baci/ above
 econometrics:
   raw:              econometrics/data/raw/
   interim:          econometrics/data/interim/
@@ -27,6 +45,8 @@ econometrics:
   figures:          econometrics/outputs/figures/
 
 # ── Networks ──────────────────────────────────────────────────────────────────
+# raw/ = edge lists filtered from BACI (chapter-specific)
+# BACI flows come from shared baci/ above
 networks:
   raw:              networks/data/raw/
   interim:          networks/data/interim/
