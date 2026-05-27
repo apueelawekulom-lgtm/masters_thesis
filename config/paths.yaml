@@ -1,0 +1,37 @@
+# ── Shared ────────────────────────────────────────────────────────────────────
+# Raw BACI downloads — all chapters read from here, nobody writes here
+shared:
+  raw:              data/raw/
+  interim:          data/interim/
+  processed:        data/processed/
+
+# ── NLI (run this chapter first — tsi_final.csv feeds everything else) ────────
+nli:
+  raw:              nli/data/raw/
+  interim:          nli/data/interim/
+  processed:        nli/data/processed/
+  tsi_final:        nli/data/processed/tsi_final.csv
+  bec_matrix:       nli/outputs/tsi_labels/bec_confusion_matrix.xlsx
+  tsi_raw_scores:   nli/outputs/tsi_labels/tsi_raw_scores.csv
+
+# ── Econometrics ──────────────────────────────────────────────────────────────
+econometrics:
+  raw:              econometrics/data/raw/
+  interim:          econometrics/data/interim/
+  processed:        econometrics/data/processed/
+  panel_us:         econometrics/data/processed/panel_us_imports.parquet
+  panel_threelegs:  econometrics/data/processed/panel_three_leg.parquet
+  tariff_concordance: econometrics/data/raw/tariff_concordance.csv
+  outputs:          econometrics/outputs/
+  tables:           econometrics/outputs/tables/
+  figures:          econometrics/outputs/figures/
+
+# ── Networks ──────────────────────────────────────────────────────────────────
+networks:
+  raw:              networks/data/raw/
+  interim:          networks/data/interim/
+  processed:        networks/data/processed/
+  edge_list:        networks/data/processed/network_edgelist.parquet
+  centrality:       networks/outputs/centrality/centrality_metrics.csv
+  outputs:          networks/outputs/
+  figures:          networks/outputs/figures/
