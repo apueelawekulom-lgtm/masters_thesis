@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/main.py
+src/paths.py
+src/masters_thesis.egg-info/PKG-INFO
+src/masters_thesis.egg-info/SOURCES.txt
+src/masters_thesis.egg-info/dependency_links.txt
+src/masters_thesis.egg-info/requires.txt
+src/masters_thesis.egg-info/top_level.txt
